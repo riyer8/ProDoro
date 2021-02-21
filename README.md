@@ -13,7 +13,7 @@ The goal of this project was to get around a problem our group had all experienc
 Our plan was to first create a bare-bones HTML webpage into which we would integrate separate aspects of our final vision. To add more design and animations, we refined the page with some CSS and Javascript.
 
 ## Process
-Things went more-or-less as planned, though HTML and CSS development were being done throughout the project.
+Our team implemented various pages that contained key productivity tools using HTML, CSS, and Javscript. We carefully distributed the tasks among us in order to get as much of our idea implemented as possible.
 
 ## Future Additions
 During the hackathon, our team came up with many ideas that weren't able to be implemented due to the lack of time.
