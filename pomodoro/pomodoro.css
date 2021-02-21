@@ -21,7 +21,6 @@ https://codepen.io/rajdgreat007/pen/ZpZWbw
   border-radius:50%;
   width:200px;
   height:200px;
-  overflow:hidden;
   position:relative;
   cursor:default;
 }
@@ -60,3 +59,4 @@ https://codepen.io/rajdgreat007/pen/ZpZWbw
 #buttons button#stop{
   background : #CD594A;
 }
+
