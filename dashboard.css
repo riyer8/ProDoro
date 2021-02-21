@@ -1,9 +1,11 @@
 * {
     box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: Trebuchet MS, sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
   }
   .name {
     text-align: center;
@@ -17,54 +19,184 @@
 .pictures {   
   width: auto;
   display: inline-block;
-  margin-bottom: 5px;
+  margin: 5px 0px 5px;
 }
   .pictures img{
-    width: 20%; /* Will shrink image to 30% of its original width */
+    width: 50%; /* Will shrink image to 30% of its original width */
   height: auto; 
   }
-  /* Container for flexboxes */
-  section {
-    display: -webkit-flex;
+  .column {
+    float: left;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  .left {
     display: flex;
+    flex-wrap: wrap;
+    width: 10%;
+    margin: 15px 15px 15px;
+    padding: 15px 15px 15px;
   }
-  
-  /* Style the navigation menu */
-  nav {
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    background: #ccc;
-    padding: 20px;
-  }
-  
-  /* Style the list inside the menu */
-  nav ul {
+  .left nav ul {
     list-style-type: none;
-    padding: 0;
+  }
+  .left li:not(:last-child) {
+    margin-bottom: 20px;
+}
+  .middle {
+    width: 50%;
   }
   
-  /* Style the content */
-  article {
-    -webkit-flex: 3;
-    -ms-flex: 3;
-    flex: 3;
-    background-color: #f1f1f1;
-    padding: 10px;
-  }
+/* Remove margins and padding from the list */
+.middle .list ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the list items */
+.middle .list ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: rgb(214, 255, 231);
+  font-size: 18px;
+  transition: 0.2s;
   
-  /* Style the footer */
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+.middle .list ul li:nth-child(odd) {
+  background: rgb(104, 255, 167);
+}
+
+/* Darker background-color on hover */
+.middle .list ul li:hover {
+  background: rgb(78, 249, 255);
+}
+
+/* When clicked on, add a background color and strike out text */
+.middle .list ul li.checked {
+  background: rgb(2, 98, 18);
+  color: rgb(190, 190, 190);
+  text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+.middle .list ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+/* Style the close button */
+.middle .close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+  
+  background-color: #ffffff;
+}
+
+.middle .close:hover {
+  background-color: #ff0000;
+  color: rgb(255, 255, 255);
+}
+
+/* Style the header */
+.middle .header {
+  background-color: #5070ff;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+/* Clear floats after the header */
+.middle .header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the input */
+.middle input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 90%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* Style the "Add" button */
+.middle .addBtn {
+  padding: 10px;
+  width: 10%;
+  background:rgb(2, 170, 100);
+  color: rgb(255, 255, 255);
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.middle .addBtn:hover {
+  background-color: rgb(34, 204, 219);
+}
+
+.middle h2 {
+    margin: 0px 0px 10px;
+    padding: 10px 10px 10px;
+}
+.last .list {
+  color: #000000;
+  font-size: 22px;
+  padding: 0 !important;
+  width: 40%;
+  font-family: crimson text, monospace;
+  border: 1px solid #dedede;
+}
+.last .list li {
+  list-style: none;
+  border-bottom: 1px dotted #ccc;
+  text-indent: 25px;
+  height: auto;
+  padding: 10px;
+  text-transform: capitalize;
+}
+.last .list li:hover {
+  background-color: #f0f0f0;
+  -webkit-transition: all 0.2s;
+  -moz-transition:    all 0.2s;
+  -ms-transition:     all 0.2s;
+  -o-transition:      all 0.2s;
+}
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   footer {
-    background-color: #777;
-    padding: 10px;
     text-align: center;
-    color: white;
-  }
-  
-  /* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
-  @media (max-width: 600px) {
-    section {
-      -webkit-flex-direction: column;
-      flex-direction: column;
-    }
-  }
+}
+footer p:hover {
+    color: rgb(255,115,232);
+}
