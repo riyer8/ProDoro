@@ -1,5 +1,4 @@
-# blueprint-project
-(title open to edits)
+# ProDoro
 Ramya Iyer, Bhavesh Kumar, Gulce Tilbe Esikara, Lucas Blakeslee
 
 ## Motivation
