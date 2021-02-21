@@ -2,7 +2,24 @@
 This code was adapted from an open-source project distributed under the MIT license by Raj Gupta
 https://codepen.io/rajdgreat007/pen/ZpZWbw
 */
-
+.nav {
+  flex: 1;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 10px;
+  display: inline;
+  list-style-type: none;
+  padding: 10px;
+}
+.nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  font-size: 20px;
+}
+.nav ul li a:hover {
+  color: rgb(20, 208, 214);
+}
 #container{
   border:1px solid #0C374D;
   border-radius :20px;

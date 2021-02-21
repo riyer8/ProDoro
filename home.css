@@ -1,5 +1,3 @@
-<! -- This code was adapted from https://css-tricks.com/how-to-create-a-notebook-design-with-css/ -->
-<! -- This code was adapted from https://1stwebdesigner.com/15-css-background-effects/ -->
 body {
 background: rgb(44,92,172);
 background: linear-gradient(90deg, rgba(44,92,172,1) 0%, rgba(70,141,252,1) 100%);
@@ -19,12 +17,8 @@ background: linear-gradient(90deg, rgba(44,92,172,1) 0%, rgba(70,141,252,1) 100%
 	}
 }
  
-    font-size: 14px;
-    font-weight: 300;
-    font-family: 'Antic Slab', sans-serif;
-}
 .logo {
-	padding-top: 20px;
+	padding-top: 30px;
 }
 .logo h2{
     font-size: 18px;
