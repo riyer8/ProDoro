@@ -1,5 +1,5 @@
 # ProDoro
-Ramya Iyer, Bhavesh Kumar, Gulce Tilbe Esikara, Lucas Blakeslee	(title open to edits)
+Ramya Iyer, Bhavesh Kumar, Gulce Tilbe Esikara, Lucas Blakeslee
 
 
 ## Motivation
